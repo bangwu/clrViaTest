@@ -208,7 +208,7 @@ namespace BanKai.Basic
         public void should_do_complement_operation()
         {
             // change "default(int)" to correct value. You should use Hex representation.
-            const int expectedResult = -0x10;//default (int);
+            const int expectedResult = unchecked ((int)0xfffffff0);//default (int);
 
             Assert.Equal(expectedResult, ~0xf);
         }
